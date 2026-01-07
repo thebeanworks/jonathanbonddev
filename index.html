@@ -272,7 +272,7 @@
             const options = { hour: '2-digit', minute: '2-digit', hour12: false };
             const local = new Date().toLocaleTimeString('en-GB', { ...options, timeZone: 'America/Los_Angeles' });
             const home = new Date().toLocaleTimeString('en-GB', { ...options, timeZone: 'Europe/London' });
-            document.getElementById('dual-clocks').innerHTML = `REDWOOD CITY: ${local}<br>MOTHER PRESENCE: ${home}`;
+            document.getElementById('dual-clocks').innerHTML = `REDWOOD CITY: ${local}<br>OLD BLIGHTY: ${home}`;
             const hr = new Date().getHours();
             const greet = document.getElementById('time-greeting');
             if (hr < 12) greet.innerText = "Good Morning"; else if (hr < 18) greet.innerText = "Good Afternoon"; else greet.innerText = "Good Evening";
