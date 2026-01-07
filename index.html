@@ -5,20 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jonathan Bond | Digital Practitioner in the Colonies</title>
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Mono&display=swap" rel="stylesheet">
-    
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%2314241A%22/><text y=%2275%22 x=%2250%22 font-size=%2270%22 font-weight=%22bold%22 fill=%22%23F5F2ED%22 font-family=%22serif%22 text-anchor=%22middle%22>JB</text></svg>">
-    <link rel="mask-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%2275%22 x=%2250%22 font-size=%2270%22 font-weight=%22bold%22 fill=%22%2314241A%22 font-family=%22serif%22 text-anchor=%22middle%22>JB</text></svg>" color="#14241A">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Mono&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%2314241A%22/><text y=%2275%22 x=%2250%22 font-size=%2270%22 font-weight=%22bold%22 fill=%22%23F5F2ED%22 font-family=%22serif%22 text-anchor=%22middle%22>JB</text></svg>">
+    <link rel="mask-icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%2275%22 x=%2250%22 font-size=%2270%22 font-weight=%22bold%22 fill=%22%2314241A%22 font-family=%22serif%22 text-anchor=%22middle%22>JB</text></svg>"
+        color="#14241A">
 
     <style>
         :root {
             --parchment: #F5F2ED;
-            --ink: #14241A;      
-            --redwood: #8B3E36;  
+            --ink: #14241A;
+            --redwood: #8B3E36;
             --body-text: #2D3731;
         }
 
@@ -26,48 +31,96 @@
             background-color: var(--parchment);
             color: var(--ink);
             font-family: 'Libre Baskerville', serif;
-            font-size: 18px; 
+            font-size: 18px;
             line-height: 1.75;
             scroll-behavior: smooth;
         }
 
-        .mono { font-family: 'Space Mono', monospace; letter-spacing: 0.05em; }
+        .mono {
+            font-family: 'Space Mono', monospace;
+            letter-spacing: 0.05em;
+        }
 
         .grain {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: url('https://www.transparenttextures.com/patterns/stardust.png');
-            opacity: 0.03; pointer-events: none; z-index: 99;
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 99;
         }
 
-        .paper-shadow { box-shadow: 10px 10px 0px 0px var(--ink); }
+        .paper-shadow {
+            box-shadow: 10px 10px 0px 0px var(--ink);
+        }
 
-        input, textarea {
+        input,
+        textarea {
             border-bottom: 2px solid rgba(20, 36, 26, 0.15);
-            background: transparent; font-size: 16px;
+            background: transparent;
+            font-size: 16px;
         }
 
-        input:focus, textarea:focus { border-bottom: 2px solid var(--redwood); outline: none; }
+        input:focus,
+        textarea:focus {
+            border-bottom: 2px solid var(--redwood);
+            outline: none;
+        }
 
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--parchment); }
-        ::-webkit-scrollbar-thumb { background: var(--ink); }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--parchment);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--ink);
+        }
+
+        .flag-p {
+            width: 24px;
+            height: 18px;
+            background: #002366;
+            /* Royal Navy Blue */
+            padding: 4px;
+            display: inline-block;
+            vertical-align: middle;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            margin-left: 8px;
+        }
+
+        .flag-p-inner {
+            background: white;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
     </style>
 </head>
 
 <body class="antialiased">
     <div class="grain"></div>
 
-    <div id="tea-break" class="fixed inset-0 z-[100] bg-[#F5F2ED] hidden flex-col items-center justify-center text-center p-8 transition-all duration-700">
+    <div id="tea-break"
+        class="fixed inset-0 z-[100] bg-[#F5F2ED] hidden flex-col items-center justify-center text-center p-8 transition-all duration-700">
         <i data-lucide="coffee" class="w-20 h-20 mb-8 text-[#14241A] opacity-70"></i>
         <h2 class="text-4xl font-bold italic mb-4">The Pot is Warming.</h2>
         <p class="max-w-md italic text-gray-600 mb-8">"Taking a moment for reflection and some Earl Grey."</p>
-        <button onclick="toggleTea()" class="mono text-[10px] uppercase tracking-widest border border-[#14241A] px-6 py-2 hover:bg-[#14241A] hover:text-white transition-all">Return to the Colonies</button>
+        <button onclick="toggleTea()"
+            class="mono text-[10px] uppercase tracking-widest border border-[#14241A] px-6 py-2 hover:bg-[#14241A] hover:text-white transition-all">Duly Refreshed</button>
     </div>
 
-    <nav class="fixed top-0 w-full p-8 flex justify-between items-center z-50 bg-[#F5F2ED]/90 backdrop-blur-sm border-b border-gray-200">
+    <nav
+        class="fixed top-0 w-full p-8 flex justify-between items-center z-50 bg-[#F5F2ED]/90 backdrop-blur-sm border-b border-gray-200">
         <div class="flex flex-col">
             <span class="mono text-sm font-bold tracking-tighter">JONATHANBOND.DEV</span>
-            <span class="mono text-[10px] uppercase tracking-widest opacity-80" style="color: var(--redwood)">Redwood City Outpost</span>
+            <span class="mono text-[10px] uppercase tracking-widest opacity-80" style="color: var(--redwood)">Redwood
+                City Outpost</span>
         </div>
         <div class="flex items-center gap-8">
             <div class="hidden md:flex gap-6 mono text-[11px] uppercase tracking-widest font-bold">
@@ -76,15 +129,18 @@
                 <a href="#chronicle" class="hover:text-[#8B3E36] transition-colors">Chronicle</a>
                 <a href="#correspondence" class="hover:text-[#8B3E36] transition-colors">Correspondence</a>
             </div>
-            <button onclick="toggleTea()" class="hover:scale-110 transition-transform" style="color: var(--ink)" title="The Proper Way"><i data-lucide="coffee" class="w-6 h-6"></i></button>
+            <button onclick="toggleTea()" class="hover:scale-110 transition-transform" style="color: var(--ink)"
+                title="The Proper Way"><i data-lucide="coffee" class="w-6 h-6"></i></button>
         </div>
     </nav>
 
     <section class="min-h-screen flex flex-col justify-center items-center px-8 pt-20">
         <div class="max-w-4xl text-center">
-            <h1 id="time-greeting" class="text-xs mono uppercase tracking-[0.5em] mb-4 font-bold" style="color: var(--redwood)">Good Day</h1>
+            <h1 id="time-greeting" class="text-xs mono uppercase tracking-[0.5em] mb-4 font-bold"
+                style="color: var(--redwood)">Good Day</h1>
             <h2 class="text-7xl md:text-9xl font-bold tracking-tighter mb-6 italic">Bond, J.</h2>
-            <p class="text-xl md:text-2xl italic opacity-90 mb-12 max-w-2xl mx-auto">Dignified software solutions from the heart of the Colonies.</p>
+            <p class="text-xl md:text-2xl italic opacity-90 mb-12 max-w-2xl mx-auto">Dignified software solutions from
+                the heart of the Colonies.</p>
             <div class="bg-white border-2 border-[#14241A] p-6 text-left mono text-sm max-w-lg mx-auto paper-shadow">
                 <div class="flex gap-2 mb-4 border-b border-[#14241A] pb-2">
                     <div class="w-2 h-2 rounded-full" style="background: var(--redwood)"></div>
@@ -107,19 +163,30 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
                 <div class="group border-l-2 border-gray-200 pl-8 pt-4">
                     <div class="border-2 border-[#14241A] p-1 bg-white mb-6 relative">
-                        <div class="absolute -top-4 -right-4 w-14 h-14 bg-[#8B3E36] rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center text-white mono text-[9px] font-bold rotate-12 z-10 border-2 border-[#F5F2ED]">APPROVED</div>
-                        <div class="aspect-video bg-gray-100 overflow-hidden"><img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80" class="grayscale group-hover:grayscale-0 transition-all duration-700 object-cover w-full h-full"></div>
+                        <div
+                            class="absolute -top-4 -right-4 w-14 h-14 bg-[#8B3E36] rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center text-white mono text-[9px] font-bold rotate-12 z-10 border-2 border-[#F5F2ED]">
+                            APPROVED</div>
+                        <div class="aspect-video bg-gray-100 overflow-hidden"><img
+                                src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80"
+                                class="grayscale group-hover:grayscale-0 transition-all duration-700 object-cover w-full h-full">
+                        </div>
                     </div>
                     <h4 class="text-2xl font-bold mb-2 uppercase tracking-tighter italic">Colonial Infrastructure</h4>
-                    <p class="text-sm text-gray-700 mb-4 italic">Scalable cloud architecture designed to bridge the gap between continents. Robust as an Edwardian bridge.</p>
-                    <span class="mono text-[10px] border-2 border-[#14241A] px-2 py-1 uppercase font-bold">Field-Tested</span>
+                    <p class="text-sm text-gray-700 mb-4 italic">Scalable cloud architecture designed to bridge the gap
+                        between continents. Robust as an Edwardian bridge.</p>
+                    <span
+                        class="mono text-[10px] border-2 border-[#14241A] px-2 py-1 uppercase font-bold">Field-Tested</span>
                 </div>
                 <div class="group border-l-2 border-gray-200 pl-8 pt-4 md:mt-24">
                     <div class="border-2 border-[#14241A] p-1 bg-white mb-6 relative">
-                        <div class="aspect-video bg-gray-100 overflow-hidden"><img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=800&q=80" class="grayscale group-hover:grayscale-0 transition-all duration-700 object-cover w-full h-full"></div>
+                        <div class="aspect-video bg-gray-100 overflow-hidden"><img
+                                src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=800&q=80"
+                                class="grayscale group-hover:grayscale-0 transition-all duration-700 object-cover w-full h-full">
+                        </div>
                     </div>
                     <h4 class="text-2xl font-bold mb-2 uppercase tracking-tighter italic">The Telegraphic API</h4>
-                    <p class="text-sm text-gray-700 mb-4 italic">A real-time messaging protocol that values brevity—Stop—Built for speed—Stop.</p>
+                    <p class="text-sm text-gray-700 mb-4 italic">A real-time messaging protocol that values
+                        brevity—Stop—Built for speed—Stop.</p>
                     <span class="mono text-[10px] border-2 border-[#14241A] px-2 py-1 uppercase font-bold">Proper</span>
                 </div>
             </div>
@@ -129,19 +196,33 @@
     <section id="monograph" class="py-24 px-8 bg-white/30">
         <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
             <div class="md:col-span-4">
-                <div class="group border-2 border-[#14241A] p-2 rotate-2 bg-white shadow-xl transition-all duration-500 hover:rotate-0">
-                    <div class="aspect-[3/4] bg-gray-200 overflow-hidden"><img src="IMG_0496.PNG" alt="Jonathan Bond" class="grayscale group-hover:grayscale-0 transition-all duration-1000 object-cover w-full h-full scale-105 group-hover:scale-100"></div>
-                    <p class="text-[9px] mono text-center mt-3 uppercase tracking-widest opacity-60">Fig 1. An Englishman in Redwood City.</p>
+                <div
+                    class="group border-2 border-[#14241A] p-2 rotate-2 bg-white shadow-xl transition-all duration-500 hover:rotate-0">
+                    <div class="aspect-[3/4] bg-gray-200 overflow-hidden"><img src="IMG_0496.PNG" alt="Jonathan Bond"
+                            class="grayscale group-hover:grayscale-0 transition-all duration-1000 object-cover w-full h-full scale-105 group-hover:scale-100">
+                    </div>
+                    <p class="text-[9px] mono text-center mt-3 uppercase tracking-widest opacity-60">Fig 1. An
+                        Englishman in Redwood City.</p>
                 </div>
             </div>
             <div class="md:col-span-8 space-y-6">
-                <h2 class="mono text-[11px] uppercase tracking-[0.4em] font-bold" style="color: var(--redwood)">A Brief Monograph</h2>
+                <h2 class="mono text-[11px] uppercase tracking-[0.4em] font-bold" style="color: var(--redwood)">A Brief
+                    Monograph</h2>
                 <h3 class="text-4xl font-bold italic">On crossing the Atlantic for Code.</h3>
-                <p class="text-xl text-gray-800 leading-relaxed italic">A practitioner of the digital arts stationed in the Redwood City outpost, translating British sensibilities regarding quality into the frantic dialects of Silicon Valley. Views software architecture as a Victorian garden requiring structure, constant pruning, and a deep respect for the underlying soil.</p>
-                <p class="text-xl text-gray-800 font-bold italic">Keep calm. Carry on. Built for speed.</p>
+                <p class="text-xl text-gray-800 leading-relaxed italic">A practitioner of the digital arts stationed in
+                    the Redwood City outpost, translating British sensibilities regarding quality into the frantic
+                    dialects of Silicon Valley. Views software architecture as a Victorian garden requiring structure,
+                    constant pruning, and a deep respect for the underlying soil.</p>
+                <p class="text-xl text-gray-800 font-bold italic flex items-center gap-3">
+                    Rigid standards. High velocity.
+                    <span class="flag-p" title="Signal: Blue Peter (Carry On / About to Sail)">
+                        <span class="flag-p-inner"></span>
+                    </span>
+                </p>
                 <div class="pt-4 border-t border-gray-200 flex justify-between items-center">
                     <p class="mono text-[11px] text-gray-500 uppercase italic">Climate: Silicon Valley Fog</p>
-                    <div id="dual-clocks" class="mono text-[10px] font-bold text-right" style="color: var(--redwood)"></div>
+                    <div id="dual-clocks" class="mono text-[10px] font-bold text-right" style="color: var(--redwood)">
+                    </div>
                 </div>
             </div>
         </div>
@@ -150,7 +231,8 @@
     <section id="chronicle" class="py-24 px-8 border-t border-gray-200 bg-[#F5F2ED]">
         <div class="max-w-4xl mx-auto">
             <div class="mb-16">
-                <h2 class="mono text-[11px] uppercase tracking-[0.4em] font-bold mb-4" style="color: var(--redwood)">The Chronicle</h2>
+                <h2 class="mono text-[11px] uppercase tracking-[0.4em] font-bold mb-4" style="color: var(--redwood)">The
+                    Chronicle</h2>
                 <h3 class="text-5xl font-bold italic">Stations & Engagements</h3>
             </div>
             <div class="space-y-16">
@@ -160,8 +242,10 @@
                         <h4 class="text-2xl font-bold italic">Codesweep.ai</h4>
                         <span class="mono text-xs font-bold uppercase tracking-widest opacity-60">2025</span>
                     </div>
-                    <p class="mono text-[11px] uppercase mb-4 font-bold" style="color: var(--redwood)">Java Engineer (Founding Team)</p>
-                    <p class="text-lg italic text-gray-700">Explored LLM-automated code implementation. Enabled autonomous defect resolution via deep project context analysis.</p>
+                    <p class="mono text-[11px] uppercase mb-4 font-bold" style="color: var(--redwood)">Java Engineer
+                        (Founding Team)</p>
+                    <p class="text-lg italic text-gray-700">Explored LLM-automated code implementation. Enabled
+                        autonomous defect resolution via deep project context analysis.</p>
                 </div>
 
                 <div class="relative pl-8 border-l-2 border-[#14241A]/20">
@@ -170,8 +254,10 @@
                         <h4 class="text-2xl font-bold italic">The Walt Disney Company</h4>
                         <span class="mono text-xs font-bold uppercase tracking-widest opacity-60">2024 — 2025</span>
                     </div>
-                    <p class="mono text-[11px] uppercase mb-4 font-bold" style="color: var(--redwood)">Principal Architect</p>
-                    <p class="text-lg italic text-gray-700">Designed the 'MAUI' continuous testing framework for live streaming and directed the selection of developer productivity measurement.</p>
+                    <p class="mono text-[11px] uppercase mb-4 font-bold" style="color: var(--redwood)">Principal
+                        Architect</p>
+                    <p class="text-lg italic text-gray-700">Designed the 'MAUI' continuous testing framework for live
+                        streaming and directed the selection of developer productivity measurement.</p>
                 </div>
 
                 <div class="relative pl-8 border-l-2 border-[#14241A]/20">
@@ -180,8 +266,10 @@
                         <h4 class="text-2xl font-bold italic">Coral Messaging</h4>
                         <span class="mono text-xs font-bold uppercase tracking-widest opacity-60">2024</span>
                     </div>
-                    <p class="mono text-[11px] uppercase mb-4 font-bold" style="color: var(--redwood)">Principal Architect</p>
-                    <p class="text-lg italic text-gray-700">Led international team to bootstrap chat ingestion. Developed POC for insights before pursuing stable ventures.</p>
+                    <p class="mono text-[11px] uppercase mb-4 font-bold" style="color: var(--redwood)">Principal
+                        Architect</p>
+                    <p class="text-lg italic text-gray-700">Led international team to bootstrap chat ingestion.
+                        Developed POC for insights before pursuing stable ventures.</p>
                 </div>
 
                 <div class="relative pl-8 border-l-2 border-[#14241A]/20">
@@ -190,8 +278,10 @@
                         <h4 class="text-2xl font-bold italic">Netflix</h4>
                         <span class="mono text-xs font-bold uppercase tracking-widest opacity-60">2015 — 2023</span>
                     </div>
-                    <p class="mono text-[11px] uppercase mb-4 font-bold" style="color: var(--redwood)">Senior Software Engineer</p>
-                    <p class="text-lg italic text-gray-700">Serverless Functions & Data Pipeline. Managed 36 billion messages daily via Kafka; at the time one of the largest scale deployments in the industry.</p>
+                    <p class="mono text-[11px] uppercase mb-4 font-bold" style="color: var(--redwood)">Senior Software
+                        Engineer</p>
+                    <p class="text-lg italic text-gray-700">Serverless Functions & Data Pipeline. Managed 36 billion
+                        messages daily via Kafka; at the time one of the largest scale deployments in the industry.</p>
                 </div>
 
                 <div class="relative pl-8 border-l-2 border-[#14241A]/20">
@@ -200,35 +290,47 @@
                         <h4 class="text-2xl font-bold italic">IBM</h4>
                         <span class="mono text-xs font-bold uppercase tracking-widest opacity-60">1997 — 2015</span>
                     </div>
-                    <p class="mono text-[11px] uppercase mb-4 font-bold" style="color: var(--redwood)">Architect & Lead Developer</p>
-                    <p class="text-lg italic text-gray-700 mb-8">Seventeen-year tenure spanning Hursley Labs and Silicon Valley. Pioneered Complex Event Processing (CEP) patterns for the WebSphere ecosystem.</p>
+                    <p class="mono text-[11px] uppercase mb-4 font-bold" style="color: var(--redwood)">Architect & Lead
+                        Developer</p>
+                    <p class="text-lg italic text-gray-700 mb-8">Seventeen-year tenure spanning Hursley Labs and Silicon
+                        Valley. Pioneered Complex Event Processing (CEP) patterns for the WebSphere ecosystem.</p>
                     <div class="bg-white/50 border border-[#14241A]/20 p-6 space-y-6">
                         <div>
-                            <p class="mono text-[9px] uppercase tracking-widest text-[#redwood] mb-1 font-bold" style="color: var(--redwood)">Distinction</p>
+                            <p class="mono text-[9px] uppercase tracking-widest text-[#redwood] mb-1 font-bold"
+                                style="color: var(--redwood)">Distinction</p>
                             <h5 class="text-lg font-bold italic">Outstanding Technical Achievement Award</h5>
-                            <p class="text-sm text-gray-600 mt-1">For architecting and implementing the JEE version of event processing.</p>
+                            <p class="text-sm text-gray-600 mt-1">For architecting and implementing the JEE version of
+                                event processing.</p>
                         </div>
                         <div class="w-full h-px bg-[#14241A]/10"></div>
                         <div>
-                            <p class="mono text-[9px] uppercase tracking-widest text-[#redwood] mb-1 font-bold" style="color: var(--redwood)">Patent</p>
-                            <h5 class="text-lg font-bold italic hover:text-[#8B3E36] transition-colors inline-flex items-center gap-2">
-                                <a href="https://patentimages.storage.googleapis.com/9b/1d/00/cdabdd70fd3da6/US10395171.pdf" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2">
+                            <p class="mono text-[9px] uppercase tracking-widest text-[#redwood] mb-1 font-bold"
+                                style="color: var(--redwood)">Patent</p>
+                            <h5
+                                class="text-lg font-bold italic hover:text-[#8B3E36] transition-colors inline-flex items-center gap-2">
+                                <a href="https://patentimages.storage.googleapis.com/9b/1d/00/cdabdd70fd3da6/US10395171.pdf"
+                                    target="_blank" rel="noopener noreferrer" class="flex items-center gap-2">
                                     Providing Event Processing Rules
                                     <i data-lucide="external-link" class="w-4 h-4 opacity-50"></i>
                                 </a>
                             </h5>
-                            <p class="text-sm text-gray-600 mt-1">US Patent 10395171B2 (2019). Co-inventors: William Bittles, David Granshaw, & Dan McGinnes.</p>
+                            <p class="text-sm text-gray-600 mt-1">US Patent 10395171B2 (2019). Co-inventors: William
+                                Bittles, David Granshaw, & Dan McGinnes.</p>
                         </div>
                         <div class="w-full h-px bg-[#14241A]/10"></div>
                         <div>
-                            <p class="mono text-[9px] uppercase tracking-widest text-[#redwood] mb-1 font-bold" style="color: var(--redwood)">Treatise</p>
-                            <h5 class="text-lg font-bold italic hover:text-[#8B3E36] transition-colors inline-flex items-center gap-2">
-                                <a href="https://www.amazon.com/Patterns-Integrating-Enterprise-Service-oriented-Architecture/dp/0738492930" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2">
+                            <p class="mono text-[9px] uppercase tracking-widest text-[#redwood] mb-1 font-bold"
+                                style="color: var(--redwood)">Treatise</p>
+                            <h5
+                                class="text-lg font-bold italic hover:text-[#8B3E36] transition-colors inline-flex items-center gap-2">
+                                <a href="https://www.amazon.com/Patterns-Integrating-Enterprise-Service-oriented-Architecture/dp/0738492930"
+                                    target="_blank" rel="noopener noreferrer" class="flex items-center gap-2">
                                     Patterns: Integrating Enterprise Service Buses in a SOA
                                     <i data-lucide="external-link" class="w-4 h-4 opacity-50"></i>
                                 </a>
                             </h5>
-                            <p class="text-sm text-gray-600 mt-1">IBM Redbook (2005). Co-authored with Martin Keen, Jerry Denman, Stuart Foster, Stepan Husek, Ben Thompson, & Helen Wylie.</p>
+                            <p class="text-sm text-gray-600 mt-1">IBM Redbook (2005). Co-authored with Martin Keen,
+                                Jerry Denman, Stuart Foster, Stepan Husek, Ben Thompson, & Helen Wylie.</p>
                         </div>
                     </div>
                 </div>
@@ -239,30 +341,37 @@
     <section id="correspondence" class="py-24 px-8 border-t border-gray-200">
         <div class="max-w-2xl mx-auto text-center">
             <h2 class="text-4xl font-bold italic mb-4">Correspondence</h2>
-            <form action="https://formspree.io/f/mgovgvrq" method="POST" class="text-left space-y-10 bg-white p-10 border border-dashed border-gray-400">
+            <form action="https://formspree.io/f/mgovgvrq" method="POST"
+                class="text-left space-y-10 bg-white p-10 border border-dashed border-gray-400">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="flex flex-col">
                         <label class="mono text-[11px] uppercase text-gray-500 font-bold">Name</label>
-                        <input type="text" name="name" required placeholder="A. Citizen" class="bg-transparent py-2 italic focus:border-[#8B3E36] outline-none">
+                        <input type="text" name="name" required placeholder="A. Citizen"
+                            class="bg-transparent py-2 italic focus:border-[#8B3E36] outline-none">
                     </div>
                     <div class="flex flex-col">
                         <label class="mono text-[11px] uppercase text-gray-500 font-bold">Mail</label>
-                        <input type="email" name="email" required placeholder="address@provider.com" class="bg-transparent py-2 italic focus:border-[#8B3E36] outline-none">
+                        <input type="email" name="email" required placeholder="address@provider.com"
+                            class="bg-transparent py-2 italic focus:border-[#8B3E36] outline-none">
                     </div>
                 </div>
                 <div class="flex flex-col">
                     <label class="mono text-[11px] uppercase text-gray-500 font-bold">Message</label>
-                    <textarea name="message" rows="4" required placeholder="STOP. DEAR JONATHAN..." class="bg-transparent py-2 italic resize-none focus:border-[#8B3E36] outline-none"></textarea>
+                    <textarea name="message" rows="4" required placeholder="STOP. DEAR JONATHAN..."
+                        class="bg-transparent py-2 italic resize-none focus:border-[#8B3E36] outline-none"></textarea>
                 </div>
                 <input type="text" name="_gotcha" style="display:none">
-                <button type="submit" class="w-full bg-[#14241A] text-white py-4 mono text-sm uppercase tracking-widest hover:bg-[#8B3E36] active:scale-[0.98] transition-all font-bold">Carry on.</button>
+                <button type="submit"
+                    class="w-full bg-[#14241A] text-white py-4 mono text-sm uppercase tracking-widest hover:bg-[#8B3E36] active:scale-[0.98] transition-all font-bold">Carry
+                    on.</button>
             </form>
         </div>
     </section>
 
     <footer class="py-12 text-center opacity-60 mono text-[10px] uppercase tracking-[0.2em] space-y-3">
         <div>Hand-coded &bull; 2026 www.JonathanBond.dev</div>
-        <div class="italic text-gray-500">BSc Mathematics & Computing &bull; <strong>University of Bath, UK</strong></div>
+        <div class="italic text-gray-500">BSc Mathematics & Computing &bull; <strong>University of Bath, UK</strong>
+        </div>
         <div style="color: var(--redwood)" class="font-bold">Redwood City, California</div>
     </footer>
 
@@ -281,4 +390,5 @@
         setInterval(updateClocks, 1000); updateClocks();
     </script>
 </body>
+
 </html>
