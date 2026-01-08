@@ -1,0 +1,92 @@
+{
+    "outpost": "Western Station Outpost",
+    "location": "Western Station, California",
+    "hero": {
+        "name": "Bond, J.",
+        "tagline": "Dignified software solutions for the Pacific Frontier.",
+        "origin": "Bristol",
+        "status": "Successfully assimilated. Tea supply: Stable."
+    },
+    "curiosities": [
+        {
+            "title": "Foundry Infrastructure",
+            "body": "Scalable cloud architecture designed to span the Atlantic. Robust as a Great Western ironwork.",
+            "tag": "Field-Tested",
+            "img": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80"
+        },
+        {
+            "title": "The Galvanic Signal",
+            "body": "A real-time messaging protocol that values brevity - translating data with high velocity across the Western Station.",
+            "tag": "Proper",
+            "img": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=800&q=80"
+        },
+        {
+            "title": "The Differential Engine",
+            "body": "Modern Machine Learning applied with Regency discipline. High-performance intelligence for the Pacific Frontier.",
+            "tag": "Autonomous",
+            "img": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"
+        }
+    ],
+    "monograph": {
+        "title": "On crossing the Atlantic for Code.",
+        "body": "Jonathan is a practitioner of the digital arts currently stationed in the Redwood City outpost. He spends his days translating British sensibilities, such as \"doing a job properly the first time\", into the frantic dialects of Silicon Valley. <br><br>He treats software architecture like a Victorian garden: it requires structure, constant pruning, and a deep respect for the underlying soil.",
+        "motto": "Rigid standards. High velocity."
+    },
+    "chronicle": [
+        {
+            "station": "Codesweep.ai",
+            "date": "2025",
+            "role": "Java Engineer (Founding Team)",
+            "desc": "Explored LLM-automated code implementation. Enabled autonomous defect resolution via deep project context analysis."
+        },
+        {
+            "station": "The Walt Disney Company",
+            "date": "2024 — 2025",
+            "role": "Principal Architect",
+            "desc": "Architected the 'MAUI' continuous testing framework for live streaming and directed the selection of developer productivity measurement."
+        },
+        {
+            "station": "Coral Messaging",
+            "date": "2024",
+            "role": "Principal Architect",
+            "desc": "Led international team to bootstrap chat ingestion. Developed POC for insights before pursuing stable ventures."
+        },
+        {
+            "station": "Netflix",
+            "date": "2015 — 2023",
+            "role": "Senior Software Engineer",
+            "desc": "Serverless Functions & Data Pipeline. Managed 36 billion messages daily via Kafka; at the time one of the largest scale deployments in the industry."
+        },
+        {
+            "station": "IBM",
+            "date": "1997 — 2015",
+            "role": "Architect & Lead Developer",
+            "desc": "Seventeen-year tenure spanning Hursley Labs and Silicon Valley. Pioneered Complex Event Processing (CEP) patterns for the WebSphere ecosystem.",
+            "notables": [
+                {
+                    "label": "Distinction",
+                    "title": "Outstanding Technical Achievement Award",
+                    "detail": "For architecting and implementing the JEE version of event processing."
+                },
+                {
+                    "label": "Patent",
+                    "title": "Providing Event Processing Rules",
+                    "detail": "US Patent 10395171B2 (2019). Co-inventors: William Bittles, David Granshaw, & Dan McGinnes.",
+                    "link": "https://patentimages.storage.googleapis.com/9b/1d/00/cdabdd70fd3da6/US10395171.pdf"
+                },
+                {
+                    "label": "Treatise",
+                    "title": "Patterns: Integrating Enterprise Service Buses in a SOA",
+                    "detail": "IBM Redbook (2005).",
+                    "link": "https://www.amazon.com/Patterns-Integrating-Enterprise-Service-oriented-Architecture/dp/0738492930"
+                }
+            ]
+        },
+        {
+            "station": "University of Bath, UK",
+            "date": "1994 — 1997",
+            "role": "Mathematics and Computing BSc – 2(ii)",
+            "desc": "Foundational study of computational logic and mathematical theory."
+        }
+    ]
+}

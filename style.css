@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Mono&display=swap');
+
+:root { 
+    --parchment: #F5F2ED; 
+    --ink: #14241A; 
+    --redwood: #8B3E36; 
+}
+
+body { 
+    background-color: var(--parchment); 
+    color: var(--ink); 
+    font-family: 'Libre Baskerville', serif; 
+    margin: 0;
+    scroll-behavior: smooth;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+}
+
+.mono { font-family: 'Space Mono', monospace; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.1em; }
+
+.grain {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.03; pointer-events: none; z-index: 99;
+}
+
+.section-wrapper { padding: 6rem 2rem; max-width: 64rem; margin: 0 auto; border-top: 1px solid rgba(0,0,0,0.1); }
+
+.nav-bar {
+    position: fixed; top: 0; width: 100%; padding: 2rem;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(245, 242, 237, 0.95); backdrop-filter: blur(8px); z-index: 50; box-sizing: border-box;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.scroll-image { 
+    width: 100%; 
+    filter: grayscale(100%); 
+    transition: filter 0.3s ease-out; 
+    will-change: filter;
+}
+
+.paper-shadow { box-shadow: 10px 10px 0px 0px var(--ink); }
+
+/* Flag Icon Styles */
+.flag-p {
+    width: 24px;
+    height: 18px;
+    background: #002366;
+    padding: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-left: 8px;
+}
+
+.flag-p-inner {
+    background: white;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Form Styles */
+form { 
+    background: white; 
+    padding: 2.5rem; 
+    border: 1px dashed rgba(20,36,26,0.2); 
+    text-align: left; 
+}
+input, textarea { 
+    border: none; 
+    border-bottom: 2px solid rgba(20,36,26,0.1); 
+    background: transparent; 
+    padding: 0.75rem 0; 
+    width: 100%; 
+    outline: none; 
+    font-style: italic;
+    font-size: 1rem;
+}
+input:focus, textarea:focus { border-bottom-color: var(--redwood); }
